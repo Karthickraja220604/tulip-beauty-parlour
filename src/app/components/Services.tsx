@@ -22,27 +22,28 @@ const services = [
     description:
       "Elegant makeup looks created for celebrations, parties and special occasions.",
   },
+  
   {
     number: "04",
-    image: "/images/nail-care.jpg",
-    title: "Nail Care",
-    description:
-      "Manicure, pedicure and detailed nail care for beautifully groomed hands and feet.",
-  },
-  {
-    number: "05",
     image: "/images/bridal-makeup.png",
     title: "Bridal Beauty",
     description:
       "Complete bridal beauty services designed to make your most special moments memorable.",
   },
   {
-    number: "06",
+    number: "05",
     image: "/images/threading-waxing.jpg",
     title: "Threading & Waxing",
     description:
       "Gentle grooming services with attention to comfort, precision and beautiful results.",
   },
+  {
+  number: "06",
+  image: "/images/saree-draping.jpg",
+  title: "Saree Draping",
+  description:
+    "Elegant and professional saree draping to complete your look for weddings, functions and special occasions.",
+},
 ];
 
 export default function Services() {

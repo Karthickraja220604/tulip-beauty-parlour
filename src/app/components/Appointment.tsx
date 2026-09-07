@@ -15,9 +15,9 @@ export default function Appointment() {
     "Hair Care",
     "Skin Care",
     "Makeup",
-    "Nail Care",
     "Bridal Beauty",
     "Threading & Waxing",
+    "Saree Draping",
   ];
 
   const times = [

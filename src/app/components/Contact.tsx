@@ -1,3 +1,12 @@
+"use client";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLocationDot,
+  faPhone,
+  faClock,
+} from "@fortawesome/free-solid-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Reveal from "./Reveal";
 
 export default function Contact() {
@@ -18,11 +27,11 @@ export default function Contact() {
           </div>
 
           {/* Contact Cards */}
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {/* Location */}
-            <div className="rounded-[2rem] border border-[#ead9d5] bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8c7c3]/40 text-xl">
-                ♡
+            <div className="group rounded-[2rem] border border-[#ead9d5] bg-white p-7 transition-all duration-500 hover:-translate-y-2 hover:border-[#b98282]/40 hover:shadow-xl hover:shadow-[#6b4a4a]/10">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8c7c3]/40 text-[#6b4a4a] transition duration-300 group-hover:bg-[#b98282] group-hover:text-white">
+                <FontAwesomeIcon icon={faLocationDot} className="h-5 w-5" />
               </div>
 
               <h3 className="mt-6 font-serif text-2xl text-[#2f2727]">
@@ -39,20 +48,25 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-start gap-2 text-sm font-medium leading-6 text-[#b98282] transition hover:text-[#6b4a4a]"
               >
-                <span className="mt-1">📍</span>
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  className="mt-1 h-3.5 w-3.5 shrink-0"
+                />
 
                 <span>
-                  2/149/11, TNHB 1st Phase, Wahab Nagar,
+                  2/149/11, TNHB 1st Phase,
                   <br />
-                  Bayanapalli, Tamil Nadu 635002
+                  Wahab Nagar, Bayanapalli,
+                  <br />
+                  Tamil Nadu 635002
                 </span>
               </a>
             </div>
 
             {/* Phone */}
-            <div className="rounded-[2rem] border border-[#ead9d5] bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8c7c3]/40 text-xl">
-                ✦
+            <div className="group rounded-[2rem] border border-[#ead9d5] bg-white p-7 transition-all duration-500 hover:-translate-y-2 hover:border-[#b98282]/40 hover:shadow-xl hover:shadow-[#6b4a4a]/10">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8c7c3]/40 text-[#6b4a4a] transition duration-300 group-hover:bg-[#b98282] group-hover:text-white">
+                <FontAwesomeIcon icon={faPhone} className="h-5 w-5" />
               </div>
 
               <h3 className="mt-6 font-serif text-2xl text-[#2f2727]">
@@ -71,10 +85,34 @@ export default function Contact() {
               </a>
             </div>
 
-            {/* Hours */}
-            <div className="rounded-[2rem] border border-[#ead9d5] bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8c7c3]/40 text-xl">
-                ⏰
+            {/* Instagram */}
+            <div className="group rounded-[2rem] border border-[#ead9d5] bg-white p-7 transition-all duration-500 hover:-translate-y-2 hover:border-[#b98282]/40 hover:shadow-xl hover:shadow-[#6b4a4a]/10">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8c7c3]/40 text-[#6b4a4a] transition duration-300 group-hover:bg-[#b98282] group-hover:text-white">
+                <FontAwesomeIcon icon={faInstagram} className="h-5 w-5" />
+              </div>
+
+              <h3 className="mt-6 font-serif text-2xl text-[#2f2727]">
+                Instagram
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-[#806969]">
+                Follow us for beauty inspiration, updates and more.
+              </p>
+
+              <a
+                href="https://www.instagram.com/tulipherbals.krishnagiri/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block break-all text-sm font-medium text-[#b98282] transition hover:text-[#6b4a4a]"
+              >
+                @tulipherbals.krishnagiri
+              </a>
+            </div>
+
+            {/* Opening Hours */}
+            <div className="group rounded-[2rem] border border-[#ead9d5] bg-white p-7 transition-all duration-500 hover:-translate-y-2 hover:border-[#b98282]/40 hover:shadow-xl hover:shadow-[#6b4a4a]/10">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8c7c3]/40 text-[#6b4a4a] transition duration-300 group-hover:bg-[#b98282] group-hover:text-white">
+                <FontAwesomeIcon icon={faClock} className="h-5 w-5" />
               </div>
 
               <h3 className="mt-6 font-serif text-2xl text-[#2f2727]">
