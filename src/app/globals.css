@@ -1,26 +1,268 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f8f1ee;
+  color: #2f2727;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #e8c7c3;
+  color: #2f2727;
+}
+
+/* =========================================
+   Tulip Beauty Parlour - Date Picker
+   ========================================= */
+
+.tulip-datepicker-wrapper {
+  width: 100%;
+}
+
+.tulip-datepicker-input {
+  width: 100%;
+  height: 56px;
+  padding: 0 18px;
+
+  border: 1px solid #ead9d5;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  color: #6b4a4a;
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tulip-datepicker-input::placeholder {
+  color: #b49b9b;
+}
+
+.tulip-datepicker-input:hover {
+  border-color: #b98282;
+}
+
+.tulip-datepicker-input:focus {
+  border-color: #b98282;
+  box-shadow: 0 0 0 3px rgba(185, 130, 130, 0.12);
+}
+
+/* Calendar */
+
+.tulip-calendar {
+  margin-top: 8px !important;
+
+  width: 310px !important;
+
+  border: 1px solid #ead9d5 !important;
+  border-radius: 20px !important;
+
+  background: #ffffff !important;
+
+  padding: 14px !important;
+
+  font-family: inherit !important;
+
+  box-shadow: 0 20px 45px rgba(107, 74, 74, 0.12) !important;
+}
+
+/* Calendar Header */
+
+.tulip-calendar .react-datepicker__header {
+  background: #f8f1ee !important;
+
+  border-bottom: 1px solid #ead9d5 !important;
+
+  border-radius: 14px 14px 0 0 !important;
+
+  padding-top: 14px !important;
+}
+
+/* Month */
+
+.tulip-calendar .react-datepicker__current-month {
+  color: #6b4a4a !important;
+
+  font-family: Georgia, serif !important;
+
+  font-size: 18px !important;
+
+  font-weight: 500 !important;
+}
+
+/* Weekday names */
+
+.tulip-calendar .react-datepicker__day-name {
+  width: 34px !important;
+
+  margin: 3px !important;
+
+  color: #806969 !important;
+
+  font-size: 11px !important;
+
+  font-weight: 600 !important;
+}
+
+/* Days */
+
+.tulip-calendar .react-datepicker__day {
+  width: 34px !important;
+  height: 34px !important;
+
+  line-height: 34px !important;
+
+  margin: 3px !important;
+
+  border-radius: 50% !important;
+
+  color: #6b4a4a !important;
+
+  font-size: 13px !important;
+
+  transition: all 0.2s ease !important;
+}
+
+/* Hover */
+
+.tulip-calendar .react-datepicker__day:hover {
+  background: #e8c7c3 !important;
+
+  color: #6b4a4a !important;
+}
+
+/* Selected */
+
+.tulip-calendar .react-datepicker__day--selected,
+.tulip-calendar .react-datepicker__day--keyboard-selected {
+  background: #b98282 !important;
+
+  color: #ffffff !important;
+}
+
+/* Today */
+
+.tulip-calendar .react-datepicker__day--today {
+  font-weight: 700 !important;
+
+  color: #b98282 !important;
+}
+
+/* Selected today */
+
+.tulip-calendar .react-datepicker__day--today.react-datepicker__day--selected {
+  color: #ffffff !important;
+}
+
+/* Previous / Next month */
+
+.tulip-calendar .react-datepicker__day--outside-month {
+  color: #d6c4c1 !important;
+}
+
+/* Navigation arrows */
+
+.tulip-calendar .react-datepicker__navigation {
+  top: 15px !important;
+}
+
+/* Previous arrow */
+
+.tulip-calendar .react-datepicker__navigation--previous {
+  left: 15px !important;
+}
+
+/* Next arrow */
+
+.tulip-calendar .react-datepicker__navigation--next {
+  right: 15px !important;
+}
+
+/* Hide native-looking triangle arrow */
+
+.tulip-calendar .react-datepicker__navigation-icon::before {
+  border-color: #b98282 !important;
+}
+
+/* Prevent calendar from overflowing on mobile */
+
+@media (max-width: 400px) {
+  .tulip-calendar {
+    width: 280px !important;
+    padding: 10px !important;
+  }
+
+  .tulip-calendar .react-datepicker__day,
+  .tulip-calendar .react-datepicker__day-name {
+    width: 30px !important;
+  }
+
+  .tulip-calendar .react-datepicker__day {
+    height: 30px !important;
+    line-height: 30px !important;
+  }
+}
+/* =========================================
+   Tulip - Smooth Reveal Animation
+   ========================================= */
+
+@keyframes tulip-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tulip-reveal {
+  animation: tulip-reveal 0.8s ease-out both;
+}
+
+/* Scroll Reveal */
+
+.tulip-reveal-hidden {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+.tulip-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+/* =========================================
+   Reduced Motion
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .tulip-reveal-hidden,
+  .tulip-reveal-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
