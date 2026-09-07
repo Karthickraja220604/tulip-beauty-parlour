@@ -43,7 +43,7 @@ export default function Contact() {
               </p>
 
               <a
-                href="https://www.google.com/maps/search/?api=1&query=2/149/11,TNHB+1st+Phase,+Wahab+Nagar,+Bayanapalli,+Tamil+Nadu+635002"
+                href="https://www.google.com/maps/search/?api=1&query=12.526194,78.204806"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-start gap-2 text-sm font-medium leading-6 text-[#b98282] transition hover:text-[#6b4a4a]"
